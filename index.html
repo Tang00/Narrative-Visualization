@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Average Car Prices Over Time</title>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-annotation/2.5.1/d3-annotation.min.js"></script>
+</head>
+<body>
+  <h1>Average Car Prices by Year</h1>
+  <p id="description">
+    How do external and internal factors effect the price of a used car? <br>
+    Following the 2008 financial crisis, used car prices began to steadily increase. This rise was influenced by decreased new car production and increased demand for affordable vehicles. <br>
+    In 2011, there was a particularly sharp uptick in used car prices compared to the previous years.
+  </p>
+  <svg id="table" width="1000" height="500"></svg>
+  <button id="nextButton">Next</button>
+
+  <script src="js/page1.js"></script>
+  <script>
+    document.getElementById("nextButton").addEventListener("click", () => {
+      window.location.href = "page2.html";
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Average Price by Odometer</title>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-annotation/2.5.1/d3-annotation.min.js"></script>
+</head>
+<body>
+  <h1>Average Price by Odometer</h1>
+  <p id="description">
+    The odometer reading of a vehicle directly relates to it's price. As vehicles accumulate mileage, their resale value typically declines, reflecting depreciation and wear.<br>
+    However, as the odometer increases, the price tapers off to a consistent value.
+  </p>
+  <svg id="table" width="1000" height="500"></svg>
+  <button id="backButton">Back</button>
+
+  <script src="js/page2.js"></script>
+  <script>
+    document.getElementById("backButton").addEventListener("click", () => {
+      window.location.href = "page2.html";
+    });
+  </script>
+</body>
+</html>
