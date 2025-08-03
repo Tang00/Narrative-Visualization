@@ -34,14 +34,16 @@
     .attr("transform", `translate(0,${height})`);
   const yAxisGroup = chart.append("g");
 
-  chart.append("text")
+  chart
+    .append("text")
     .attr("class", "x label")
     .attr("text-anchor", "middle")
     .attr("x", width / 2)
     .attr("y", height + margin.bottom - 30)
     .text("Year");
 
-  chart.append("text")
+  chart
+    .append("text")
     .attr("class", "y label")
     .attr("text-anchor", "middle")
     .attr("transform", `rotate(-90)`)
@@ -49,7 +51,6 @@
     .attr("y", -60)
     .text("Average Selling Price ($)");
 
-  
   const data = Array.from(
     d3.rollup(
       rawData,
@@ -106,7 +107,9 @@
   const annotations = [
     {
       note: {
-        label: `+${percentChange2010to2011.toFixed(1)}% increase from previous year.`,
+        label: `+${percentChange2010to2011.toFixed(
+          1
+        )}% increase from previous year.`,
       },
       type: d3.annotationLabel,
       x: x(2011) + x.bandwidth() / 2,
@@ -118,5 +121,4 @@
 
   const makeAnnotations = d3.annotation().annotations(annotations);
   annotationLayer.call(makeAnnotations);
-
 })();
